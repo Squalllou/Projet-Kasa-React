@@ -1,8 +1,12 @@
+import Banner from '../components/Banner.jsx'
+import logements from '../datas/logements.json'
+import CardList from '../components/CardList.jsx'
+
 function Home() {
   return (
     <div>
-      <h1>Bienvenue sur Kasa 🏡</h1>
-      <p>Ceci est la page d’accueil.</p>
+      <Banner/>
+      <CardList logements={logements} />
     </div>
   )
 }
