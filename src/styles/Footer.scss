@@ -5,6 +5,7 @@
   height: 150px;
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 
   &__content {
     display: flex;
@@ -30,7 +31,6 @@
 
   &__rights {
     font-family: 'Montserrat', sans-serif;
-    font-size:small;
     margin-top: 0;
     margin-bottom: 20px;
   }
