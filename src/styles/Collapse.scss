@@ -4,7 +4,6 @@
     &__title{
     background-color:#FF6060 ;
     color:#FFFFFF ;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     padding: 0 10px;
     width: 100%;
@@ -14,16 +13,19 @@
     justify-content: space-between;
     box-sizing: border-box;
     margin: 0;
-    border-radius: 5px;
+    border-radius: 10px;
     }
 
     &__content {
         background-color: #F6F6F6;
         padding: 15px;
         box-sizing: border-box;
-        border-radius: 5px;
-        font-family: 'Montserrat', sans-serif;
+        border-radius: 10px;
         font-size: small;
+
+        & p {
+            margin: 0;
+        }
     }
 
     &__arrow{
@@ -38,5 +40,9 @@
 
     &--about {
         width: 75%;
+    }
+
+    &--logement-card {
+        width: 48%;
     }
 }

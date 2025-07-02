@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
+import { FaStar } from 'react-icons/fa'
 import logements from '../datas/logements.json'
 import Collapse from '../components/Collapse.jsx';
 import Slideshow from '../components/Slideshow.jsx'
+import '../styles/logement-card.scss'
 
 function LogementCard() {
   const { id } = useParams(); // Recupere l'id dans l'URL
@@ -16,31 +18,42 @@ function LogementCard() {
 
   return (
     <div className="logement-card">
-        <Slideshow pictures={logement.pictures}/>
-        <section className="logement-card__main-info">
-        <h1>{logement.title}</h1>
-        <p>{logement.location}</p>
-        <ul className="logement-card__tags">
-            {logement.tags.map(tag => (
-                <li key={tag}>{tag}</li>
-            ))}
-        </ul>
-        </section>
+        <Slideshow pictures={logement.pictures} />
 
-        <aside className="logement-card__owner-rating">
-            <img src={logement.host.picture} alt={logement.host.name} className="logement-card__owner-photo" />
-            <p className="logement-card__owner-name">{logement.host.name}</p>
-            {/*ici les etoiles de rank*/}
-        </aside>
+        <div className="logement-card__header">
+            <section className="logement-card__info">
+                <h1 className="logement-card__title">{logement.title}</h1>
+                <p className="logement-card__location">{logement.location}</p>
+                <ul className="logement-card__tags">
+                    {logement.tags.map(tag => (
+                    <li key={tag} className="tag">{tag}</li>
+                    ))}
+                </ul>
+            </section>
+
+            <aside className="logement-card__owner">
+                <div className="owner__info">
+                    <p className="owner__name">{logement.host.name}</p>
+                    <img src={logement.host.picture} alt={logement.host.name} className="owner__photo"/>
+                </div>
+                <div className="owner__rating">
+                    <FaStar className="star"/>
+                    <FaStar className="star"/>
+                    <FaStar className="star"/>
+                    <FaStar className="star-empty"/>
+                    <FaStar className="star-empty"/>
+                </div>
+            </aside>
+        </div>
 
         <section className="logement-card__collapse">
-            <Collapse key={logement.id} titre="Description" variant="logement-card">
-            <p>{logement.description}</p>
+            <Collapse key={`${logement.id}-desc`} titre="Description" variant="logement-card"> {/*** -desc pour avoir une key unique */}
+                <p>{logement.description}</p>
             </Collapse>
-            <Collapse key={logement.id} titre="Équipements" variant="logement-card">
-                <ul>
+            <Collapse key={`${logement.id}-equip`} titre="Équipements" variant="logement-card"> {/*** -equip pour avoir une key unique */}
+                <ul> 
                     {logement.equipments.map((equipement, index) => (
-                        <li key={index}>{equipement}</li>
+                    <li key={index}>{equipement}</li>
                     ))}
                 </ul>
             </Collapse>
