@@ -1,0 +1,43 @@
+.header
+  padding: 30px 50px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  &__link
+    text-decoration: none
+    padding: 0 25px
+    color: #000000
+    font-weight: 600
+
+  &__link--active
+    text-decoration: underline
+
+
+//partie responsive mobile basé sur 768px en breakpoint
+@media screen and (max-width: 768px)
+  .header
+    margin: 30px
+    padding: 0
+
+    &__logo
+      width: 145px
+
+    &__link
+      padding-left: 20px
+      padding-right: 0
+      font-weight: 600
+
+//responsive petit écran 375px
+@media screen and (max-width: 375px)
+  .header
+    margin: 20px
+    padding: 0
+
+    &__logo
+      width: 145px
+
+    &__link
+      font-size: small
+      padding: 0 0 0 10px
+      margin: 0

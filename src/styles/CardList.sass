@@ -1,0 +1,16 @@
+.cards
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  background-color: #F6F6F6
+  border-radius: 25px
+  margin: 30px 50px 0 50px
+  padding: 50px
+  gap: 50px
+
+@media screen and (max-width: 768px)
+  .cards
+    grid-template-columns: 1fr
+    background-color: white
+    margin: 30px
+    padding: 0
+    gap: 20px

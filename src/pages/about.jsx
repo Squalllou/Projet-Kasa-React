@@ -1,7 +1,7 @@
 import BannerAbout from '../components/BannerAbout.jsx'
 import Collapse from '../components/Collapse.jsx'
 import aboutDatas from '../datas/AboutDatas.js'
-import '../styles/About.scss'
+import '../styles/About.sass'
 
 function About() {
   return (

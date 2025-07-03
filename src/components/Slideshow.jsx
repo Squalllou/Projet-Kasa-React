@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import '../styles/Slideshow.scss'
+import '../styles/Slideshow.sass'
 
 function Slideshow({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0)

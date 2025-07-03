@@ -1,5 +1,5 @@
 import BannerAboutImg from '../assets/BannerAboutImg.png'
-import '../styles/BannerAbout.scss'
+import '../styles/BannerAbout.sass'
 
 function BannerAbout() {
   return (

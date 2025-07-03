@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { FaChevronUp } from 'react-icons/fa'
-import '../styles/Collapse.scss'
+import '../styles/Collapse.sass'
 
 function Collapse({ titre, children, variant = 'default' }) {
   const [isOpen, setIsOpen] = useState(false)

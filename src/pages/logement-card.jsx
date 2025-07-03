@@ -4,7 +4,7 @@ import { FaStar } from 'react-icons/fa'
 import logements from '../datas/logements.json'
 import Collapse from '../components/Collapse.jsx';
 import Slideshow from '../components/Slideshow.jsx'
-import '../styles/logement-card.scss'
+import '../styles/logement-card.sass'
 
 function LogementCard() {
   const { id } = useParams(); // Recupere l'id dans l'URL

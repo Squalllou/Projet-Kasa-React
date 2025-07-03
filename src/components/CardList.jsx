@@ -1,5 +1,5 @@
 import CardItem from './CardItem.jsx'
-import '../styles/CardList.scss'
+import '../styles/CardList.sass'
 
 function CardList({logements}) {
     return (

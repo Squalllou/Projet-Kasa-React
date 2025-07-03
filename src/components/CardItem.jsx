@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import '../styles/CardItem.scss'
+import '../styles/CardItem.sass'
 
 function CardItem({ logement }) {
   return (

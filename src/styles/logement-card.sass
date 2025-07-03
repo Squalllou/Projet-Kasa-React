@@ -1,0 +1,144 @@
+.logement-card
+  &__header
+    display: flex
+    justify-content: space-between
+    margin: 30px 50px 20px
+
+  &__info
+    flex: 1
+
+  &__title
+    font-size: xx-large
+    color: #FF6060
+    font-weight: 600
+    margin: 0 0 5px 0
+
+  &__location
+    font-size: large
+    font-weight: 600
+    color: #333
+    margin: 0 0 15px 0
+
+  &__tags
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+    padding: 0
+    margin: 0
+
+    .tag
+      list-style: none
+      background-color: #FF6060
+      color: white
+      font-weight: 600
+      border-radius: 10px
+      padding: 5px 15px
+      display: flex
+      justify-content: center
+      align-items: center
+
+  &__owner
+    width: 200px
+    // fixe ou ajustable
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    gap: 10px
+
+    & .owner__info
+      display: flex
+      align-items: center
+      gap: 10px
+
+    & .owner__name
+      font-weight: 500
+      color: #FF6060
+      text-align: right
+      max-width: 93px
+      line-height: 1.5
+      margin-top: 5px
+      margin-bottom: 0
+
+    & .owner__photo
+      width: 64px
+      height: 64px
+      border-radius: 50%
+      object-fit: cover
+
+    & .owner__rating
+      width: 100%
+      display: flex
+      justify-content: flex-end
+      font-size: x-large
+      gap: 10px
+      margin-top: 10px
+
+    & .star
+      color: #FF6060
+
+    & .star-empty
+      color: #E3E3E3
+
+  &__collapse
+    display: flex
+    justify-content: space-between
+    margin: 0 50px
+
+    & ul
+      list-style: none
+      padding: 0
+      margin: 0
+
+    & p
+      margin: 0
+
+@media screen and (max-width: 768px)
+  .logement-card
+
+    &__header
+      flex-direction: column
+      margin: 20px
+
+    &__info
+      margin-bottom: 10px
+
+    &__title
+      font-weight: 500
+
+    &__location
+      font-size: medium
+
+    .tag
+      width: 84px
+      font-size: small
+
+    &__owner
+      width: 100%
+      margin-bottom: 10px
+      flex-direction: row-reverse
+      align-items: center
+
+      & .owner__info
+        justify-content: center
+        text-align: center
+
+        & .owner__name
+          max-width: 93px
+
+      & .owner__rating
+        justify-content: flex-start
+        font-size: large
+
+      & .owner__photo
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        object-fit: cover
+
+    &__collapse
+      flex-direction: column
+      margin: 0 20px
+      gap: 20px
+
+      & > *
+        margin-bottom: 15px
