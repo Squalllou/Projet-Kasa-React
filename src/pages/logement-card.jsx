@@ -12,14 +12,15 @@ function LogementCard() {
   // Trouver le logement avec cet id
   const logement = logements.find(log => log.id === id);
 
-  if (!logement) {
+  if (!logement) { /** on verifie l'existance de l'URL */
     return <Navigate to="*" />;
   }
 
   return (
     <div className="logement-card">
-        <Slideshow pictures={logement.pictures} />
+        <Slideshow pictures={logement.pictures} /> {/** affichage du carrousel */}
 
+        {/** partie d'entete de la fiche du logement avec titre / location / tags */}
         <div className="logement-card__header">
             <section className="logement-card__info">
                 <h1 className="logement-card__title">{logement.title}</h1>
@@ -30,7 +31,8 @@ function LogementCard() {
                     ))}
                 </ul>
             </section>
-
+            
+            {/** partie de droite avec le nom / la photo du propriétaire et la note en etoile */}
             <aside className="logement-card__owner">
                 <div className="owner__info">
                     <p className="owner__name">{logement.host.name}</p>
@@ -45,7 +47,7 @@ function LogementCard() {
                 </div>
             </aside>
         </div>
-
+         {/** partie des collapses des informations sur le logement */}           
         <section className="logement-card__collapse">
             <Collapse key={`${logement.id}-desc`} titre="Description" variant="logement-card"> {/*** -desc pour avoir une key unique */}
                 <p>{logement.description}</p>

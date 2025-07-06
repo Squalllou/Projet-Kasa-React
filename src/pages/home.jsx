@@ -6,7 +6,7 @@ function Home() {
   return (
     <div>
       <Banner/>
-      <CardList logements={logements} />
+      <CardList logements={logements} /** passage des props lies au logements *//>
     </div>
   )
 }
