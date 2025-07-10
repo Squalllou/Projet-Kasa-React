@@ -15,7 +15,7 @@ function Collapse({ titre, children, variant = 'default' }) {
           onClick={toggle} /** gestion de l'evenement du clic sur le chevron */
         />
       </h2>
-      {isOpen && <div className="collapse__content">{children}</div>}
+      <div className={`collapse__content ${isOpen ? 'open' : ''}`}>{children}</div>
     </div>
   )
 }

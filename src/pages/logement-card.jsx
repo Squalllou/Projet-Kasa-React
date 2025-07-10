@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
-import { FaStar } from 'react-icons/fa'
+import RatingStars from '../components/RatingStars.jsx';
 import logements from '../datas/logements.json'
 import Collapse from '../components/Collapse.jsx';
 import Slideshow from '../components/Slideshow.jsx'
@@ -39,11 +39,7 @@ function LogementCard() {
                     <img src={logement.host.picture} alt={logement.host.name} className="owner__photo"/>
                 </div>
                 <div className="owner__rating">
-                    <FaStar className="star"/>
-                    <FaStar className="star"/>
-                    <FaStar className="star"/>
-                    <FaStar className="star-empty"/>
-                    <FaStar className="star-empty"/>
+                    <RatingStars rating={logement.rating} /> {/** composant de notation qui recupere en props le nombre d'etoiles */}
                 </div>
             </aside>
         </div>

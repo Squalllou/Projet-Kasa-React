@@ -4,13 +4,13 @@ import { Outlet } from 'react-router-dom' //pour pouvoir utiliser le layout sur 
 
 function Layout() {
   return (
-    <>
+    <div className="container">
       <Header />
       <main>
         <Outlet /> {/* La ou les pages enfants vont s’afficher */}
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
